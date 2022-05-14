@@ -38,7 +38,11 @@ app.use(express.static('public'))
 // app.engine('handlebars', hbs.engine);
 // app.set('view engine', 'handlebars');
 
-app.use('/', allRoutes);
+// app.use('/', allRoutes);
+
+app.get("/", (req,res) => {
+    res.send("connection!!!!")
+})
 
 sequelize.sync({ force: true}).then(function() {
     app.listen(PORT, function() {

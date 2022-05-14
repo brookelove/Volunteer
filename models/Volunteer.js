@@ -1,6 +1,6 @@
 const {Model, DataTypes} = require('sequelize');
-const sequelize = requre('../cofing/connection');
-const bcrypt = requre("bcrypt");
+const sequelize = require('../config/connection');
+const bcrypt = require("bcrypt");
 
 class Volunteer extends Model {}
 
@@ -30,4 +30,4 @@ Volunteer.init({
 })
 
 //export the model to be used later 
-model.exports = Volunteer
+module.exports = Volunteer

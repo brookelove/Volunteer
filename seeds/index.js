@@ -48,8 +48,8 @@ const pushOut = async ()=> {
     const createOpps = await Opportunity.bulkCreate(opps);
     console.log(createOpps)
     // premaking atendee to include seeds
-    await createOpps[1].addAtendee[1];
-    await createOpps[1].addAtendee[2];
+    await createOpps[1].addAttendee[1];
+    await createOpps[1].addAttendee[2];
     process.exit(0);
 };
 

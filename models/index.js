@@ -15,7 +15,7 @@ Volunteer.belongsToMany(Opportunity, {
     as: "Attendee"
 });
 
-Opportunity.hasMany(Volunteer, {
+Opportunity.belongsToMany(Volunteer, {
     through: "Volunteeropportunities",
     as: "Attendee"
 });

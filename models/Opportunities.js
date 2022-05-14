@@ -1,5 +1,5 @@
 const {Model, DataTypes} = require('sequelize');
-const sequelize = requre('../cofing/connection');
+const sequelize = require("../config/connection");
 
 class Opportunity extends Model {}
 

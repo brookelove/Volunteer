@@ -24,7 +24,7 @@ Opportunity.init ({
         type: DataTypes.DATE,
         allowNull: false
     },
-    volunteers: {
+    volunteersNeeded: {
         type: DataTypes.INTEGER,
         allowNull: false
     },

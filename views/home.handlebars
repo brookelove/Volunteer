@@ -1,0 +1,17 @@
+<h1>Homepage!</h1>
+{{#each oppts}}
+    <h2>{{title}}</h2>
+    <h3>Date: {{date}}</h3>
+    {{#if ../loggedIn}}
+    <h4>{{distance}} miles away!</h4>
+    {{/if}}
+    <p>we need {{volunteersNeeded}}</p>
+    <p>{{slotsLeft}} slot(s) left!</p>
+    <a href="/oppts/{{id}}"><button>Details</button></a>
+    {{#if ../loggedIn}}
+    <button data-userid={{../userid}} data-opptid={{id}} class="attendBTN">Attend</button>
+    {{/if}}
+    <hr>
+{{/each}}
+
+<script src="/js/home.js"></script>

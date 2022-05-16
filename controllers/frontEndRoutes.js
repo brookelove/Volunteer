@@ -1,4 +1,4 @@
-const express = requrie('express');
+const express = require('express');
 const router = express.Router();
 const req = require('express/lib/request');
 const res = require('express/lib/response');

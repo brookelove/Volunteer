@@ -14,7 +14,7 @@ const PORT = porcess.env.PORT || 3000;
 const {Volunteer, Opportunity} = require('./models');
 
 const sess = {
-    secret: 'process.env.SECRECT_SESSION',
+    secret: process.env.SECRECT_SESSION,
     cookie: {maxAge: 1000*60*60*2},
     resave: false,
     saveUninitialized: true,
@@ -37,10 +37,6 @@ app.use(express.static('public'));
  app.set('view engine', 'handlebars');
 
  app.use('/', allRoutes);
-
-app.get("/", (req,res) => {
-    res.send("connection!!!!")
-})
 
 sequelize.sync({ force: true}).then(function() {
     app.listen(PORT, function() {
